@@ -70,7 +70,7 @@ function W({onNavigate:A}){
     ]}),
     (0,l.jsxs)("section",{className:"site-how site-section",children:[
       (0,l.jsxs)("div",{className:"site-how-intro",children:[
-        (0,l.jsx)("h2",{children:"Vos elegís. Nosotros nos ocupamos."}),
+        (0,l.jsx)("h2",{children:"Consultá por disponibilidad."}),
         (0,l.jsx)("a",{href:u,target:"_blank",rel:"noreferrer",className:"site-button site-button-dark",children:["Consultar por WhatsApp",(0,l.jsx)("span",{children:"↗"})]})
       ]}),
       (0,l.jsx)("div",{className:"site-steps",children:[
@@ -88,7 +88,10 @@ function W({onNavigate:A}){
         (0,l.jsx)("h2",{children:"¿Te interesa vender cosmética profesional?"}),
         (0,l.jsx)("p",{children:"Sumate a nuestra red de vendedoras y conocé las opciones mayoristas."})
       ]}),
-      (0,l.jsx)("button",{className:"site-button site-button-cream",onClick:()=>A("vendedora"),children:["Sumate como vendedora",(0,l.jsx)("span",{children:"→"})]})
+      (0,l.jsxs)("div",{className:"site-seller-actions",children:[
+        (0,l.jsx)("button",{className:"site-button site-button-products",onClick:()=>A("cosmetica"),children:"Ver productos"}),
+        (0,l.jsx)("button",{className:"site-button site-button-cream",onClick:()=>A("vendedora"),children:["Sumate como vendedora",(0,l.jsx)("span",{children:"→"})]})
+      ]})
     ]})
   ]})
 }

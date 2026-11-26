@@ -65,7 +65,7 @@ replaceBetween('function tC({onNavigate:A})', 'let tU={name:"circle-check"', `fu
     ]})
   ]})
 }`);
-replaceBetween('function tRentalFeatures(A)', 'function tQ()', fs.readFileSync('rental-function.js', 'utf8'));
-replaceBetween('function tQ()', 'var S=I("aIIwE");function tn(A)', fs.readFileSync('sale-function.js', 'utf8'));
+replaceBetween('function tRentalFeatures(A)', 'function tSaleBeforeAfter()', fs.readFileSync('rental-function.js', 'utf8'));
+replaceBetween('function tSaleBeforeAfter()', 'var S=I("aIIwE");function tn(A)', fs.readFileSync('sale-function.js', 'utf8'));
 fs.writeFileSync('app.js', app, 'utf8');
 console.log('Updated navigation and homepage.');

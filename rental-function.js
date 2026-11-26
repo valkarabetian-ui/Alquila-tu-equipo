@@ -88,7 +88,7 @@ function to(){
   let[A,t]=(0,S.useState)(null);
   return (0,l.jsxs)("div",{className:"site-rental-page mx-auto max-w-6xl px-4 py-12 md:px-6",children:[
     (0,l.jsxs)("header",{className:"max-w-2xl",children:[
-      (0,l.jsx)("h1",{className:"text-3xl font-bold tracking-tight text-stone-900",children:"ALQUILA TU EQUIPO"}),
+      (0,l.jsx)("h1",{className:"text-3xl font-bold tracking-tight text-stone-900",children:"Alquilá tu equipo"}),
       (0,l.jsx)("p",{className:"mt-3 text-stone-600",children:"Equipamiento profesional para centros de estética. Alquiler por jornadas de 12hs."})
     ]}),
     (0,l.jsx)("div",{className:"site-rental-grid mt-10",children:T.map(A=>(0,l.jsx)(tRentalCard,{equipo:A,onOpen:t},A.slug))}),

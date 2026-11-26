@@ -40,7 +40,7 @@ function tRentalCard({equipo:A,onOpen:t}){
       (0,l.jsx)("p",{className:"site-rental-brand",children:A.marca}),
       (0,l.jsx)("h2",{children:A.nombre}),
       (0,l.jsx)("ul",{className:"site-rental-card-features",children:B.slice(0,3).map((A,t)=>(0,l.jsx)("li",{children:A},t))}),
-      (0,l.jsx)("button",{type:"button",className:"site-rental-details-button",onClick:()=>t(A),children:["Ver detalles",(0,l.jsx)("span",{"aria-hidden":"true",children:"↗"})]})
+      (0,l.jsx)("button",{type:"button",className:"site-rental-details-button",onClick:()=>t(A),children:["Ver detalles",(0,l.jsx)("span",{className:"site-rental-details-arrow","aria-hidden":"true",children:"↗"})]})
     ]})
   ]})
 }

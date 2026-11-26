@@ -20,6 +20,14 @@ const oldEquipmentDescription = '(0,l.jsx)("p",{className:"mt-2 text-sm leading-
 const equipmentFeatures = '(0,l.jsx)("ul",{className:"mt-2 list-disc space-y-1 pl-4 text-sm leading-relaxed text-stone-600 marker:text-emerald-700",children:p.map((A,t)=>(0,l.jsx)("li",{children:A},t))})';
 if (app.includes(oldEquipmentDescription)) app = app.replace(oldEquipmentDescription, equipmentFeatures);
 else if (!app.includes(equipmentFeatures)) throw new Error('Could not locate equipment description markup.');
+const indibaWithoutPhoto = 'imagenes:[],disponible:!1,notaDisponibilidad:"Próximamente"';
+const indibaWithPhoto = 'imagenes:["/assets/Indiba.png"],disponible:!1,notaDisponibilidad:"Próximamente"';
+if (app.includes(indibaWithoutPhoto)) app = app.replace(indibaWithoutPhoto, indibaWithPhoto);
+else if (!app.includes(indibaWithPhoto)) throw new Error('Could not locate Indiba equipment data.');
+const oldImageLookup = 'function tg(A){return tE[A]}';
+const newImageLookup = 'function tg(A){return tE[A]||A}';
+if (app.includes(oldImageLookup)) app = app.replace(oldImageLookup, newImageLookup);
+else if (!app.includes(newImageLookup)) throw new Error('Could not locate equipment image lookup.');
 replaceBetween('function tq({producto:A})', 'function tC({onNavigate:A})', `function tq({producto:A}){
   let[t,k]=(0,S.useState)(!1),[u,I]=(0,S.useState)(0),B=A.imagenes.map(td).filter(Boolean);
   return (0,l.jsxs)("article",{className:"site-cosmetic-card",children:[
@@ -41,7 +49,6 @@ replaceBetween('function tq({producto:A})', 'function tC({onNavigate:A})', `func
         (0,l.jsxs)("div",{children:[(0,l.jsx)("p",{className:"site-cosmetic-detail-label",children:"Modo de uso"}),(0,l.jsx)("ul",{className:"site-cosmetic-detail-list site-cosmetic-use-list",children:A.modoDeUso.map((A,t)=>(0,l.jsx)("li",{children:A},t))})]}),
         A.notaLegal&&(0,l.jsx)("p",{className:"site-cosmetic-legal-note",children:A.notaLegal})
       ]}),
-      (0,l.jsx)(tp,{text:"Hola, quiero consultar por "+A.nombre+".",className:"site-cosmetic-cta",children:"Consultar por WhatsApp"})
     ]})
   ]})
 }`);
@@ -59,5 +66,6 @@ replaceBetween('function tC({onNavigate:A})', 'let tU={name:"circle-check"', `fu
   ]})
 }`);
 replaceBetween('function tRentalFeatures(A)', 'function tQ()', fs.readFileSync('rental-function.js', 'utf8'));
+replaceBetween('function tQ()', 'var S=I("aIIwE");function tn(A)', fs.readFileSync('sale-function.js', 'utf8'));
 fs.writeFileSync('app.js', app, 'utf8');
 console.log('Updated navigation and homepage.');

@@ -35,7 +35,7 @@ function W({onNavigate:A}){
       (0,l.jsx)("div",{className:"site-service-grid",children:t.map((t,k)=>(0,l.jsxs)("button",{className:"site-service-card",onClick:()=>A(t.key),children:[
         (0,l.jsx)("span",{className:"site-card-top",children:(0,l.jsx)("span",{className:"site-card-arrow",children:"↗"})}),
         (0,l.jsx)("h3",{children:t.title}),(0,l.jsx)("p",{children:t.copy}),
-        (0,l.jsxs)("span",{className:"site-card-link",children:[t.action," →"]})
+        (0,l.jsxs)("span",{className:"site-card-link",children:[t.action," ",(0,l.jsx)("span",{className:"site-card-link-arrow","aria-hidden":"true",children:"→"})]})
       ]},t.key))})
     ]}),
     (0,l.jsxs)("section",{className:"site-video-band",children:[
@@ -61,11 +61,11 @@ function W({onNavigate:A}){
     (0,l.jsxs)("section",{className:"site-featured site-section",children:[
       (0,l.jsxs)("div",{className:"site-section-heading site-section-heading-row",children:[
         (0,l.jsx)("div",{children:(0,l.jsx)("h2",{children:"Sumá nuevos tratamientos. Alquilá el equipo ideal."})}),
-        (0,l.jsx)("button",{className:"site-text-link",onClick:()=>A("alquiler"),children:"Ver catálogo completo →"})
+        (0,l.jsxs)("button",{className:"site-text-link",onClick:()=>A("alquiler"),children:["Ver catálogo completo ",(0,l.jsx)("span",{className:"site-decorative-arrow","aria-hidden":"true",children:"→"})]})
       ]}),
       (0,l.jsx)("div",{className:"site-featured-grid",children:k.map(t=>(0,l.jsxs)("article",{className:"site-equipment-card",children:[
         (0,l.jsx)(ta,{equipo:t}),
-        (0,l.jsx)(tp,{text:"Hola, quiero consultar por el alquiler de "+t.nombre+".",className:"site-equipment-cta",children:"Consultar disponibilidad →"})
+        (0,l.jsx)(tp,{text:"Hola, quiero consultar por el alquiler de "+t.nombre+".",className:"site-equipment-cta",children:["Consultar disponibilidad ",(0,l.jsx)("span",{className:"site-decorative-arrow","aria-hidden":"true",children:"→"})]})
       ]},t.slug))})
     ]}),
     (0,l.jsxs)("section",{className:"site-how site-section",children:[
